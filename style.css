@@ -13,9 +13,7 @@ body{
   background: rgb(239, 228, 220);
 }
 
-/* ===================== */
-/* HEADER */
-/* ===================== */
+/* ================= HEADER ================= */
 
 .header {
   width: 100%;
@@ -46,9 +44,7 @@ body{
    margin-top: 5px;
 }
 
-/* ===================== */
-/* SCENE COKELAT */
-/* ===================== */
+/* ================= COKELAT ================= */
 
 .SceneCokelat {
   display: flex;
@@ -75,9 +71,7 @@ body{
    width: 70%;
 }
 
-/* ===================== */
-/* SURAT OVERLAY */
-/* ===================== */
+/* ================= SURAT OVERLAY ================= */
 
 .SceneSurat {
   position: fixed;
@@ -97,28 +91,25 @@ body{
   pointer-events: auto;
 }
 
-/* WRAPPER BIAR TEKS NEMPEL KE GAMBAR */
+/* WRAPPER RELATIVE UNTUK TEKS */
 .SceneSurat {
   position: fixed;
 }
 
-/* BIKIN CONTAINER RELATIVE */
-.SceneSurat img {
-  width: clamp(280px, 60vw, 800px);
+#news {
+  width: clamp(300px, 60vw, 800px);
   height: auto;
   display: block;
 }
 
-/* ===================== */
-/* TEKS DI ATAS KORAN */
-/* ===================== */
+/* ================= TEKS DI ATAS KORAN ================= */
 
 .surat1 {
   position: absolute;
-  top: 65%; /* ini bikin pas di area putih */
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: clamp(250px, 45vw, 520px);
+  width: clamp(260px, 45vw, 520px);
 
   text-align: center;
   font-family: 'Times New Roman', serif;
@@ -127,9 +118,7 @@ body{
   color: #3e2b1f;
 }
 
-/* ===================== */
-/* CAMERA */
-/* ===================== */
+/* ================= CAMERA ================= */
 
 .camera-wrapper {
   position: relative;
@@ -148,9 +137,7 @@ body{
   transform: scale(1.1);
 }
 
-/* ===================== */
-/* FLASH */
-/* ===================== */
+/* ================= FLASH ================= */
 
 #flash {
   position: fixed;
@@ -161,9 +148,7 @@ body{
   transition: opacity 0.2s ease;
 }
 
-/* ===================== */
-/* FOTO */
-/* ===================== */
+/* ================= FOTO ================= */
 
 .SceneFoto {
   position: fixed;
@@ -188,9 +173,7 @@ body{
   border-radius: 12px;
 }
 
-/* ===================== */
-/* RESPONSIVE HP */
-/* ===================== */
+/* ================= RESPONSIVE HP ================= */
 
 @media (max-width: 768px){
 
@@ -203,8 +186,16 @@ body{
     width: 100%;
   }
 
+  /* BESARIN KORAN DI HP */
+  #news {
+    width: 92vw;
+  }
+
+  /* KECILIN & SESUAIKAN TEKS */
   .surat1{
-    width: 80%;
+    width: 78vw;
+    font-size: 11.5px;
+    line-height: 1.4;
     top: 58%;
   }
 
